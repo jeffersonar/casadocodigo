@@ -10,34 +10,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Produto implements Serializable{
+public class Produto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	private String titulo;
-	private String descricao;	
-	private Integer pagina;
-	
+	private String descricao;
+	private int pagina;
+
 	@ElementCollection
 	private List<Preco> precos;
-	
+
 	public Integer getId() {
 		return id;
 	}
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public List<Preco> getPrecos() {
-		return precos;
-	}
-
-	public void setPrecos(List<Preco> precos) {
-		this.precos = precos;
 	}
 
 	public String getTitulo() {
@@ -62,6 +54,14 @@ public class Produto implements Serializable{
 
 	public void setPagina(int pagina) {
 		this.pagina = pagina;
+	}
+
+	public List<Preco> getPrecos() {
+		return precos;
+	}
+
+	public void setPrecos(List<Preco> precos) {
+		this.precos = precos;
 	}
 
 	@Override
