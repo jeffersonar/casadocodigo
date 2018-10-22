@@ -33,8 +33,8 @@ public class JPAConfiguration {
 		props.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
 		props.setProperty("hibernate.show_sql", "true");
 		props.setProperty("hibernate.format_sql", "true");
-//		props.setProperty("hibernate.hbm2ddl.auto", "create-drop");
-		props.setProperty("hibernate.hbm2ddl.auto", "update");
+		props.setProperty("hibernate.hbm2ddl.auto", "create-drop");
+//		props.setProperty("hibernate.hbm2ddl.auto", "update");
 
 		factoryBean.setJpaProperties(props);
 		factoryBean.setPackagesToScan("br.com.casadocodigo.loja.models");
