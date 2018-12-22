@@ -26,8 +26,18 @@ public class Produto implements Serializable {
 	@DateTimeFormat
 	private Calendar dataLancamento;
 
+	private String sumarioPath;
+
 	@ElementCollection
 	private List<Preco> precos;
+	
+	public String getSumarioPath() {
+		return sumarioPath;
+	}
+
+	public void setSumarioPath(String sumarioPath) {
+		this.sumarioPath = sumarioPath;
+	}
 
 	public Integer getId() {
 		return id;
